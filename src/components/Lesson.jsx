@@ -14,7 +14,7 @@ const Lesson = () => {
     e.preventDefault();
     setLoading(true); // Start loading when request is sent
     try {
-      const res = await axios.post("http://localhost:5000/chat", { message });
+      const res = await axios.post("https://python-tutor-backend-rfei.onrender.com/chat", { message });
       setResponse(res.data.response);
     } catch (error) {
       console.error("Error fetching response", error);
